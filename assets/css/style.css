@@ -12,16 +12,17 @@
 }
 
 .characters {
-	width: 100%;
 	margin-bottom: 40px;
 }
 
-.lisa, .Mark, .denny, .johnny {
+.restyle {
 	border: 2px solid black;
+	width: 140px;
 	float: left;
 	text-align: center;
 	margin: 10px;
 	background-color: #83C1BC;
+	border-radius: 10px;
 }
 
 #lisa-hp, #mark-hp, #denny-hp, #johnny-hp {
@@ -37,4 +38,14 @@ img {
 	height: 70px;
 	display: inline-block;
 	margin: 0 20px 20px 20px;
+}
+
+.fight-section {
+	clear: both;
+}
+
+.printActions {
+	clear: both;
+	margin-bottom: 40px;
+	margin-top: 20px;
 }
