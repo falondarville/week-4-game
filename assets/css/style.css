@@ -1,0 +1,40 @@
+.title-container {
+	background-color: #848482;
+	color: white;
+	height: 80px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.title-container h1 {
+	line-height: 80px;
+	font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.characters {
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.lisa, .Mark, .denny, .johnny {
+	border: 2px solid black;
+	float: left;
+	text-align: center;
+	margin: 10px;
+	background-color: #83C1BC;
+}
+
+#lisa-hp, #mark-hp, #denny-hp, #johnny-hp {
+	padding-bottom: 10px;
+}
+
+p {
+	padding-top: 10px;
+}
+
+img {
+	width: 100px;
+	height: 70px;
+	display: inline-block;
+	margin: 0 20px 20px 20px;
+}
