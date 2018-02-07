@@ -62,6 +62,8 @@ $(document).ready(function() {
 		// console.log(yourDefender);
 	});
 
+	// CALCULATE FIGHTING: will this be a separate function altogether or part of the attack-button function below? It is dependent on click, so it may come down to game design, and the functionality can work either way as long as I call the calculations withing the click function. 
+
 	// Attack button, prints message
 	$(".attack-button").click(function() {
 		// if your characters reaches 0 HP, you lose
