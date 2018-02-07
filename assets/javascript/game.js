@@ -2,34 +2,33 @@ $(document).ready(function() {
 
 	// initial variables
 	var lisa = {
-		name: Lisa,
+		name: "Lisa",
 		HP: 180,
 		attackPower: 7,
 		counterAttackPower: 25
 	}
 	var denny = {
-		name: Denny,
+		name: "Denny",
 		HP: 120,
 		attackPower: 6,
 		counterAttackPower: 18
 	}
 	var johnny = {
-		name: Johnny,
+		name: "Johnny",
 		HP: 100,
 		attackPower: 4,
 		counterAttackPower: 12
 	}
 	var mark = {
-		name: Mark,
+		name: "Mark",
 		HP: 80,
 		attackPower: 3,
 		counterAttackPower: 10
 	}
 	
-	// yourCharacter = "";
-	// enemiesAvailable = "";
-	// yourDefender = "";
-	// yourAttackStrength = 0;
+	// var yourCharacter = "";
+	// var enemiesAvailable = "";
+	// var yourDefender = "";
 
 	// update HP variables
 	$("#lisa-hp").html(lisa.HP);
@@ -46,23 +45,24 @@ $(document).ready(function() {
 		$(this).parent().find(".restyle").css("background-color", "#83C1BC");
 		$(this).css("background-color", "#74D774");
 		$(this).parent().find(".restyle").appendTo(".enemies-available");
-		var yourCharacter = $(this).appendTo(".your-character").css("float", "none");
+		$(this).appendTo(".your-character").css("float", "none");
 		clicks = false;
 		} else {
-			var yourDefender = $(this).appendTo(".defender").css("background-color","#FFB6C1");
+			$(this).appendTo(".defender").css("background-color","#FFB6C1");
 		}
-		// return yourCharacter;
-		// return yourDefender;
+
+		var yourCharacter = $("your-character").children().first().attr("id");
+		var yourDefender = $(".defender").children().first().attr("id");
+		console.log(yourCharacter);
+		console.log(yourDefender);
 		// how do I grab the id of the character and defenders
 	});
 
 	// Attack button, prints message
 
 	$(".attack-button").click(function() {
-		$(".printActions").text("You attacked " + yourDefender + " for " +yourAttackStrength + " damage. " + yourDefender + " attacked you back for " + "fill this" + " damage. ");
+		$(".printActions").text("You attacked " + yourDefender + " for " + lisa.attackPower + " damage. " + yourDefender + " attacked you back for " + "fill this" + " damage. ");
 	});
-
-
 
 	// if attack button clicked and there is no enemy selected, display text "No enemy here."
 
