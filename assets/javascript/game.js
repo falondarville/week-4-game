@@ -64,6 +64,17 @@ $(document).ready(function() {
 
 	// Attack button, prints message
 	$(".attack-button").click(function() {
+		// if your characters reaches 0 HP, you lose
+		if (your-character.HP <= 0) {
+			$(".printActions").text("You lost.");
+			// show reset game button
+			// game over
+		} else if (yourDefender.HP <= 0) {
+			$(".printActions").text("You defeated " + yourDefender + " .");
+			// show reset game button
+			// check if there are any other enemies available, and if there are, prompt user to choose another enemy. If there are no other enemies, the user wins the whole game. 
+		} 
+
 		$(".printActions").text("You attacked " + yourDefender + " for " + lisa.attackPower + " damage. " + yourDefender + " attacked you back for " + "fill this" + " damage. ");
 		// placedholder functionality
 		attackpower +=;
@@ -72,7 +83,7 @@ $(document).ready(function() {
 
 	// if attack button clicked and there is no enemy selected, display text "No enemy here."
 
-	// if your characters reaches 0 HP, you lose
+
 
 	// if your defenders reaches 0 HP, they are deleted from the game
 
