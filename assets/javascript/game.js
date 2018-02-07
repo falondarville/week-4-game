@@ -46,22 +46,28 @@ $(document).ready(function() {
 		$(this).css("background-color", "#74D774");
 		$(this).parent().find(".restyle").appendTo(".enemies-available");
 		$(this).appendTo(".your-character").css("float", "none");
+		// how do I grab the id of the character and defenders? I actually may not need to do this. Instead, I need to be able to refer to the variables I initially set out for each character. This will mean that I can reach into the variable to grab additional information I need further in the game (starting HP, attack power, and counter attack power)
+		// alternatively, I can assign an id to the character moved to new div
+		// this didn't work: var yourCharacter = $(".your-character").children().first().attr("id");
+		// this didn't work: console.log($(".your-character option:selected").attr("id"));
 		clicks = false;
 		} else {
 			$(this).appendTo(".defender").css("background-color","#FFB6C1");
+			var yourDefender = $(".defender").closest().attr("id");
 		}
 
-		var yourCharacter = $("your-character").children().first().attr("id");
-		var yourDefender = $(".defender").children().first().attr("id");
-		console.log(yourCharacter);
-		console.log(yourDefender);
-		// how do I grab the id of the character and defenders
+		// return yourCharacter;
+		// return yourDefender;
+		// console.log(yourCharacter);
+		// console.log(yourDefender);
 	});
 
 	// Attack button, prints message
-
 	$(".attack-button").click(function() {
 		$(".printActions").text("You attacked " + yourDefender + " for " + lisa.attackPower + " damage. " + yourDefender + " attacked you back for " + "fill this" + " damage. ");
+		// placedholder functionality
+		attackpower +=;
+		HP -= yourDefender.counterAttackPower;
 	});
 
 	// if attack button clicked and there is no enemy selected, display text "No enemy here."
