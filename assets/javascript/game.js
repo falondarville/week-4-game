@@ -72,23 +72,17 @@ $(document).ready(function() {
 		} else if (yourDefender.HP <= 0) {
 			$(".printActions").text("You defeated " + yourDefender + " .");
 			// show reset game button
-			// check if there are any other enemies available, and if there are, prompt user to choose another enemy. If there are no other enemies, the user wins the whole game. 
-		} 
+			// defenders is deleted from the game
+			// check if there are any other enemies available (this may have to be a different function including a counter of three total enemies), and if there are, prompt user to choose another enemy. If there are no other enemies, the user wins the whole game. 
+		} else if () {
+			// if attack button clicked and there is no enemy selected, display text "No enemy here."
+		}
 
 		$(".printActions").text("You attacked " + yourDefender + " for " + lisa.attackPower + " damage. " + yourDefender + " attacked you back for " + "fill this" + " damage. ");
-		// placedholder functionality
+		// placeholder functionality
 		attackpower +=;
 		HP -= yourDefender.counterAttackPower;
+
 	});
-
-	// if attack button clicked and there is no enemy selected, display text "No enemy here."
-
-
-
-	// if your defenders reaches 0 HP, they are deleted from the game
-
-	// you win when you beat all three enemies
-
-	// reset game button appears when you lose against an enemy or you win against all three enemies
 
 });
